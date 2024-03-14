@@ -1,10 +1,11 @@
 # state.py
 import reflex as rx
 import openai
+import os
 
 
 
-openai.api_key = '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'
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 class State(rx.State):
     question: str
